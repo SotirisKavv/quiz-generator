@@ -234,7 +234,7 @@ def generate_and_append_question(user_prompt, difficulty="moderate", questions_c
                 },
             ]
         )
-        st.code(response.choices[0].message.content, language="json")
+        # st.code(response.choices[0].message.content, language="json")
         gpt_response = json.loads(response.choices[0].message.content)
         new_questions = [Question(
             question=q["Question"],
